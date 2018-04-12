@@ -36,12 +36,15 @@ $(function() {
     })
   }
   $('#loginBtn').on('click', function() {
+    // 获取页面表单数据
     let mobile = $('#mobile').val();
     let password = $('#password').val();
+    // 调用接口要提交的参数
     let params = {
       username: mobile,
       password: password
     }
+    // 执行登录
     checkForm(params)
       .then(login)
       .then(check)
