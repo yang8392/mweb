@@ -5,6 +5,5 @@ axios.interceptors.response.use(function (response) {
     // 在我们得到服务器返回的数据之前做一些处理
     return response.data;
   }, function (error) {
-    // Do something with response error
     return Promise.reject(error);
   });
